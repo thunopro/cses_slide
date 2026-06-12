@@ -395,3 +395,93 @@ button svg {
 .toggle-code-btn:active {
     transform: translateY(0);
 }
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .slide {
+        grid-template-columns: 1fr;
+        padding: 4rem 5vw 8rem;
+        gap: 2rem;
+    }
+    
+    .slide-title {
+        font-size: 3rem;
+    }
+    
+    .slide-content {
+        font-size: 1.25rem;
+    }
+    
+    .slide-right {
+        max-height: 40vh;
+    }
+}
+
+@media (max-width: 768px) {
+    .slide {
+        padding: 2rem 5vw 6rem;
+        gap: 1.5rem;
+    }
+
+    .slide-title {
+        font-size: 2.2rem;
+    }
+
+    .slide-content {
+        font-size: 1.1rem;
+        margin-top: 0.5rem;
+    }
+
+    .problem-title {
+        font-size: 1.1rem;
+    }
+
+    .controls {
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    button {
+        width: 40px;
+        height: 40px;
+    }
+
+    .keyboard-hint {
+        display: none;
+    }
+
+    .child-slide-container {
+        padding: 3.5rem 4vw 2rem;
+    }
+
+    #closeChildBtn {
+        top: 0.5rem;
+        right: 0.5rem;
+        width: 40px;
+        height: 40px;
+    }
+
+    .cses-problem {
+        padding: 1.5rem;
+        border-radius: 12px;
+    }
+
+    .cses-problem h2 {
+        font-size: 1.8rem;
+    }
+
+    .cses-problem h3 {
+        font-size: 1.2rem;
+        margin-top: 1.5rem;
+    }
+    
+    .slide-right {
+        max-height: 45vh;
+        padding: 1.5rem;
+    }
+    
+    .indicators {
+        max-width: 60%;
+        gap: 0.4rem;
+    }
+}
