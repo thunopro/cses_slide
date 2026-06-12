@@ -7,5 +7,6 @@
     "outputFormat": "Print one integer: the minimum total reparation cost. However, if there are no solutions, print \"IMPOSSIBLE\".",
     "constraints": "<ul>\n<li>$1 \\le n \\le 10^5$</li>\n<li>$1 \\le m \\le 2 \\cdot 10^5$</li>\n<li>$1 \\le a,b \\le n$</li>\n<li>$1 \\le c \\le 10^9$</li>\n</ul>",
     "exampleInput": "5 6\n1 2 3\n2 3 5\n2 4 2\n3 4 8\n5 1 7\n5 4 4",
-    "exampleOutput": "14"
+    "exampleOutput": "14",
+    "sampleCode": "int n , m ; \nstruct shape {\n    int u , v , w ; \n    bool operator < ( const shape &other ) const \n    {\n        return w < other.w ; \n    }\n} E [maxn] ; \n\nint lab [maxn] ; \nint find ( int u ) \n{\n    return (lab [u] < 0)? u : lab [u] = find (lab[u]) ; \n}\nbool uni ( int u , int v ) \n{\n    if ( (u=find(u)) == (v=find(v))) return false ; \n    if ( lab [u] > lab [v] ) swap (u,v) ; \n    lab [u] += lab [v]  ; \n    lab [v] = u ; \n    return true ; \n}\nsigned main () \n{\n    ios_base::sync_with_stdio(0); \n    cin.tie(0);cout.tie(0); \n    cin >> n >> m ;\n    for ( int i = 1 ; i <= m ; i ++ ) \n    {\n        int u,v,w ; cin >> u >> v >> w ; E [i] = {u,v,w} ; \n    }\n    sort (E+1,E+m+1) ; \n    memset (lab,-1,sizeof lab) ; \n    int res = 0 ; \n    int cnt = 0 ; \n    for ( int i = 1 ; i <= m ; i ++ ) \n    {\n        auto [u,v,w] = E [i] ; \n        if ( uni (u,v) ) res += w , cnt ++ ; \n    }\n    if ( cnt != n-1 ) cout << \"IMPOSSIBLE\" ; \n    else cout << res ; \n    return 0;\n}"
 }

@@ -13,23 +13,24 @@ async function loadData() {
         if (!indexRes.ok) throw new Error("Could not load index.json");
         const categories = await indexRes.json();
         
-        for (const catFolder of categories) {
+        const categoryPromises = categories.map(async (catFolder) => {
             const catRes = await fetch(`data/${catFolder}/category.json`);
-            if (!catRes.ok) continue;
+            if (!catRes.ok) return null;
             const catData = await catRes.json();
             
-            const loadedProblems = [];
-            for (const probFile of catData.problems || []) {
+            const probPromises = (catData.problems || []).map(async (probFile) => {
                 const probRes = await fetch(`data/${catFolder}/${probFile}`);
-                if (probRes.ok) {
-                    const probData = await probRes.json();
-                    loadedProblems.push(probData);
-                }
-            }
+                if (probRes.ok) return await probRes.json();
+                return null;
+            });
             
+            const loadedProblems = (await Promise.all(probPromises)).filter(p => p !== null);
             catData.problems = loadedProblems;
-            slideData.push(catData);
-        }
+            return catData;
+        });
+        
+        const loadedCategories = (await Promise.all(categoryPromises)).filter(c => c !== null);
+        slideData.push(...loadedCategories);
         
         init();
     } catch (e) {
