@@ -7,5 +7,6 @@
     "outputFormat": "Print one integer: the number of occurrences.",
     "exampleInput": "saippuakauppias\npp",
     "exampleOutput": "2",
-    "constraints": "<ul>\n<li>$1 \\le n, m \\le 10^6$ (lengths of the strings)</li>\n</ul>"
+    "constraints": "<ul>\n<li>$1 \\le n,m \\le 10^6$</li>\n</ul>",
+    "sampleCode": "int n , m ; \nstring s,t ; \nint hashA [maxn] ;\nint POW [maxn] ; \nint get_hash ( int l , int r ) \n{\n    return ( hashA[r] - hashA[l-1]*POW[r-l+1] + 1ll*mod*mod ) % mod ; \n}\nsigned main () \n{\n    ios_base::sync_with_stdio(0); \n    cin.tie(0);cout.tie(0); \n    cin >> s >> t ; \n    n = s.size () , m = t.size () ; \n    s = ' ' + s , t = ' ' + t ; \n    POW [0] = 1 ; \n    for ( int i = 1 ; i <= n ; i ++ ) POW [i] = POW [i-1]*53%mod ; \n    for ( int i = 1 ; i <= n ; i ++ ) hashA [i] = (hashA[i-1]*53+s[i])%mod ; \n    int hashB = 0 ; \n    for ( int i = 1 ; i <= m ; i ++ ) hashB = (hashB*53+t[i])%mod ; \n    int res = 0 ; \n    for ( int i = 1 ; i <= n - m + 1 ; i ++ ) res += get_hash(i,i+m-1) == hashB ; \n    cout << res ; \n    return 0;\n}"
 }

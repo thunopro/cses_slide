@@ -2,10 +2,11 @@
     "id": "1081_common_divisors",
     "title": "Common Divisors",
     "source": "CSES 1081",
-    "statement": "Given an array of $n$ positive integers, your task is to find two integers such that their greatest common divisor is as large as possible.",
-    "inputFormat": "The first input line has an integer $n$.\nThe second line has $n$ integers.",
+    "statement": "You are given an array of $n$ positive integers. Your task is to find two integers such that their greatest common divisor is as large as possible.",
+    "inputFormat": "The first input line has an integer $n$: the size of the array.\nThe second line has $n$ integers $x_1,x_2,\\ldots,x_n$: the contents of the array.",
     "outputFormat": "Print the maximum greatest common divisor.",
-    "constraints": "<ul><li>$2 \\le n \\le 2 \\cdot 10^5$</li><li>$1 \\le x_i \\le 10^6$</li></ul>",
+    "constraints": "<ul>\n<li>$2 \\le n \\le 2 \\cdot 10^5$</li>\n<li>$1 \\le x_i \\le 10^6$</li>\n</ul>",
     "exampleInput": "5\n3 14 15 7 9",
-    "exampleOutput": "7"
+    "exampleOutput": "7",
+    "sampleCode": "int n ; \nint cnt [maxn] ; \nsigned main () \n{\n    ios_base::sync_with_stdio(0); \n    cin.tie(0);cout.tie(0); \n    cin >> n ; \n    for ( int i = 1 ; i <= n ; i ++ ) \n    {\n        int x ; cin >> x ; \n        cnt [x] ++ ; \n    }\n    int N = 1e6 ; \n    for ( int i = N ; i >= 1 ; i -- ) \n    {\n        int sum = 0 ; \n        for ( int j = i ; j <= N ; j += i ) sum += cnt [j] ; \n        if ( sum >= 2 ) \n        {\n            cout << i ; re \n        }\n    }\n    return 0;\n}"
 }

@@ -2,10 +2,11 @@
     "id": "1131_tree_diameter",
     "title": "Tree Diameter",
     "source": "CSES 1131",
-    "statement": "You are given a tree consisting of $n$ nodes. The diameter of a tree is the maximum distance between two nodes. Determine the diameter of the tree.",
-    "inputFormat": "The first input line contains an integer $n$.\nThen there are $n-1$ lines describing the edges.",
+    "statement": "You are given a tree consisting of $n$ nodes.\nThe diameter of a tree is the maximum distance between two nodes. Your task is to determine the diameter of the tree.",
+    "inputFormat": "The first input line contains an integer $n$: the number of nodes. The nodes are numbered $1,2,\\ldots,n$.\nThen there are $n-1$ lines describing the edges. Each line contains two integers $a$ and $b$: there is an edge between nodes $a$ and $b$.",
     "outputFormat": "Print one integer: the diameter of the tree.",
-    "constraints": "<ul><li>$1 \\le n \\le 2 \\cdot 10^5$</li></ul>",
+    "constraints": "<ul>\n<li>$1 \\le n \\le 2 \\cdot 10^5$</li>\n<li>$1 \\le a,b \\le n$</li>\n</ul>",
     "exampleInput": "5\n1 2\n1 3\n3 4\n3 5",
-    "exampleOutput": "3"
+    "exampleOutput": "3",
+    "sampleCode": "nt n ; \nvi adjList [maxn] ; \nint pos , best ; \n\nint dp [maxn] ; \nvoid bfs ( int u ) \n{\n    queue <int> q ; \n    memset (dp,-1,sizeof dp) ;\n    dp [u] = 0 ; \n    q . push (u) ; \n    while ( !q.empty())\n    {\n        int u = q.front() ; q.pop() ; \n        for ( auto v : adjList [u] ) \n        {\n            if ( dp [v] == -1 ) \n            {\n                dp [v] = dp [u] + 1 , q . push (v) ; \n            }\n        }\n    }\n    best = -1 ; \n    for ( int i = 1 ; i <= n ; i ++ ) if ( dp [i] > best ) best = dp [i] , pos = i ; \n}\nsigned main () \n{\n    ios_base::sync_with_stdio(0); \n    cin.tie(0);cout.tie(0); \n    cin >> n ; \n    for ( int i = 1 ; i < n ; i ++ ) \n    {\n        int u , v ; cin >> u >> v ; \n        adjList [u] . pb (v) ; \n        adjList [v] . pb (u) ; \n    }\n    bfs (1) , bfs (pos) ; \n    cout << best ; \n    return 0;\n}"
 }

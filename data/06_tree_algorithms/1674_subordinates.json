@@ -7,5 +7,6 @@
     "outputFormat": "Print $n$ integers: for each employee $1,2,\\dots,n$ the number of their subordinates.",
     "exampleInput": "5\n1 1 2 3",
     "exampleOutput": "4 1 1 0 0",
-    "constraints": "<ul>\n<li>$1 \\le n \\le 2 \\cdot 10^5$</li>\n</ul>"
+    "constraints": "<ul>\n<li>$1 \\le n \\le 2 \\cdot 10^5$</li>\n</ul>",
+    "sampleCode": "int n; \nvi adjList [maxn] ;\nint sz [maxn] ; \nvoid dfs ( int u ) \n{\n    sz [u] = 1 ; \n    for ( auto v : adjList [u] ) \n    {\n        dfs (v) ; \n        sz [u] += sz [v] ; \n    }\n}\nsigned main () \n{\n    ios_base::sync_with_stdio(0); \n    cin.tie(0);cout.tie(0); \n    cin >> n ; \n    for ( int i = 2 ; i <= n ; i ++ ) \n    {\n        int x ; cin >> x ; \n        adjList [x] . pb (i) ; \n    }\n    dfs (1) ; \n    for ( int i = 1 ; i <= n ; i ++ ) cout << sz [i] - 1 << \" \" ; \n    return 0;\n}"
 }

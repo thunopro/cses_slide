@@ -4,8 +4,9 @@
     "source": "CSES 1646",
     "statement": "Given an array of $n$ integers, your task is to process $q$ queries of the form: what is the sum of values in range $[a,b]$?",
     "inputFormat": "The first input line has two integers $n$ and $q$: the number of values and queries.\nThe second line has $n$ integers $x_1,x_2,\\dots,x_n$: the array values.\nFinally, there are $q$ lines describing the queries. Each line has two integers $a$ and $b$: what is the sum of values in range $[a,b]$?",
-    "outputFormat": "Print the result of each query on a new line.",
+    "outputFormat": "Print the result of each query.",
     "exampleInput": "8 4\n3 2 4 5 1 1 5 3\n2 4\n5 6\n1 8\n3 3",
     "exampleOutput": "11\n2\n24\n4",
-    "constraints": "<ul>\n<li>$1 \\le n, q \\le 2 \\cdot 10^5$</li>\n<li>$1 \\le x_i \\le 10^9$</li>\n<li>$1 \\le a \\le b \\le n$</li>\n</ul>"
+    "constraints": "<ul>\n<li>$1 \\le n,q \\le 2 \\cdot 10^5$</li>\n<li>$1 \\le x_i \\le 10^9$</li>\n<li>$1 \\le a \\le b \\le n$</li>\n</ul>",
+    "sampleCode": "int n , nq ; \nint a [maxn] , sum [maxn] ; \nsigned main () \n{\n    ios_base::sync_with_stdio(0); \n    cin.tie(0);cout.tie(0); \n    cin >> n >> nq ; \n    for ( int i = 1 ; i <= n ; i ++ ) cin >> a [i] , sum [i] = sum [i-1] + a [i] ; \n    while ( nq -- ) \n    {\n        int l , r ; cin >> l >> r ; \n        cout << sum [r] - sum [l-1] << \"\\n\" ; \n    }\n    return 0;\n}"
 }

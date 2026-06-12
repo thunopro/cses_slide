@@ -2,10 +2,11 @@
     "id": "1079_binomial_coefficients",
     "title": "Binomial Coefficients",
     "source": "CSES 1079",
-    "statement": "Your task is to calculate $n$ binomial coefficients modulo $10^9+7$.",
-    "inputFormat": "The first input line contains an integer $n$.\nAfter this, there are $n$ lines, each containing two integers $a$ and $b$.",
+    "statement": "Your task is to calculate $n$ binomial coefficients modulo $10^9+7$.\n\nA binomial coefficient ${a \\choose b}$ can be calculated using the formula $\\frac{a!}{b!(a-b)!}$. We assume that $a$ and $b$ are integers and $0 \\le b \\le a$.",
+    "inputFormat": "The first input line contains an integer $n$: the number of calculations.\nAfter this, there are $n$ lines, each of which contains two integers $a$ and $b$.",
     "outputFormat": "Print each binomial coefficient modulo $10^9+7$.",
-    "constraints": "<ul><li>$1 \\le n \\le 10^5$</li><li>$1 \\le b \\le a \\le 10^6$</li></ul>",
+    "constraints": "<ul>\n<li>$1 \\le n \\le 10^5$</li>\n<li>$0 \\le b \\le a \\le 10^6$</li>\n</ul>",
     "exampleInput": "3\n5 3\n8 1\n9 5",
-    "exampleOutput": "10\n8\n126"
+    "exampleOutput": "10\n8\n126",
+    "sampleCode": "int fac [maxn] , ifac [maxn] ;\nvoid build_ckn () \n{\n    const int N = 1e6 ;\n    fac [0] = ifac [0] = 1 ;\n    for ( int i = 1 ; i <= N ; i ++ ) fac [i] = 1ll * fac[i-1] * i % mod ;\n    ifac [N] = _pow (fac[N], mod - 2) ;\n    for ( int i = N - 1 ; i >= 1 ; i -- ) ifac [i] = 1ll * ifac[i+1] * (i+1) % mod ;\n}\nint ckn ( int k , int n ) \n{\n    return 1ll * fac[n] * ifac[k] % mod * ifac[n-k] % mod ;\n}\nsigned main () \n{\n    ios_base::sync_with_stdio(0); \n    cin.tie(0);cout.tie(0); \n    build_ckn() ; \n    int test ; cin >> test ; \n    while ( test -- ) \n    {\n        int n , k ; cin >> n >> k ; \n        cout << ckn (k,n) << \"\\n\" ; \n    }\n    return 0;\n}"
 }

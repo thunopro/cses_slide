@@ -4,7 +4,6 @@
     "content": "<ul><li>Băm xâu (String Hashing - Polynomial Hash).</li><li>Thuật toán KMP, Z-Algorithm để so khớp chuỗi.</li><li>Trie và Suffix Array.</li></ul>",
     "problems": [
         "1753_string_matching.json",
-        "1732_finding_borders.json",
         "1731_word_combinations.json"
     ]
 }
