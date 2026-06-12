@@ -1,0 +1,10 @@
+{
+    "title": "Range Queries",
+    "subtitle": "Truy vấn trên đoạn",
+    "content": "<ul><li>Mảng cộng dồn (Prefix Sum) và Difference Array.</li><li>Segment Tree và Lazy Propagation.</li><li>Fenwick Tree (Binary Indexed Tree).</li></ul>",
+    "problems": [
+        "1646_static_range_sum_queries.json",
+        "1648_dynamic_range_sum_queries.json",
+        "1652_forest_queries.json"
+    ]
+}

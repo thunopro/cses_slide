@@ -1,0 +1,11 @@
+{
+    "id": "1753_string_matching",
+    "title": "String Matching",
+    "source": "CSES 1753",
+    "statement": "Given a string and a pattern, your task is to count the number of positions where the pattern occurs in the string.",
+    "inputFormat": "The first input line has a string of length $n$, and the second input line has a pattern of length $m$. Both of them consist of characters a–z.",
+    "outputFormat": "Print one integer: the number of occurrences.",
+    "exampleInput": "saippuakauppias\npp",
+    "exampleOutput": "2",
+    "constraints": "<ul>\n<li>$1 \\le n, m \\le 10^6$ (lengths of the strings)</li>\n</ul>"
+}

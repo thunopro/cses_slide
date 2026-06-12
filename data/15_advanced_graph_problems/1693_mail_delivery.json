@@ -1,0 +1,11 @@
+{
+    "id": "1693_mail_delivery",
+    "title": "Mail Delivery",
+    "source": "CSES 1693",
+    "statement": "Your task is to deliver mail to the inhabitants of a city. You have to start and end your route at the post office, and go through every street exactly once.",
+    "inputFormat": "The first input line has two integers $n$ and $m$.\nThen there are $m$ lines describing the streets.",
+    "outputFormat": "Print all the nodes on the route in the order you will visit them. If there are no solutions, print `IMPOSSIBLE`.",
+    "constraints": "<ul><li>$1 \\le n \\le 10^5$</li><li>$1 \\le m \\le 2 \\cdot 10^5$</li></ul>",
+    "exampleInput": "6 8\n1 2\n1 3\n2 3\n2 4\n2 6\n3 5\n3 6\n4 5",
+    "exampleOutput": "1 2 4 5 3 6 2 3 1"
+}

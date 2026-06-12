@@ -1,0 +1,11 @@
+{
+    "id": "1713_counting_divisors",
+    "title": "Counting Divisors",
+    "source": "CSES 1713",
+    "statement": "Given $n$ integers, your task is to report for each integer the number of its divisors.\nFor example, if $x=18$, the correct answer is $6$ because its divisors are $1,2,3,6,9,18$.",
+    "inputFormat": "The first input line has an integer $n$: the number of integers.\nAfter this, there are $n$ lines, each containing an integer $x$.",
+    "outputFormat": "For each integer, print the number of its divisors.",
+    "exampleInput": "3\n16\n17\n18",
+    "exampleOutput": "5\n2\n6",
+    "constraints": "<ul>\n<li>$1 \\le n \\le 10^5$</li>\n<li>$1 \\le x \\le 10^6$</li>\n</ul>"
+}

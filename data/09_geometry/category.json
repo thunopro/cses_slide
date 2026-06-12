@@ -1,0 +1,10 @@
+{
+    "title": "Geometry",
+    "subtitle": "Hình học",
+    "content": "<ul><li>Tính diện tích đa giác, kiểm tra điểm nằm trong đa giác.</li><li>Giao điểm của các đoạn thẳng.</li><li>Bao lồi (Convex Hull).</li></ul>",
+    "problems": [
+        "2189_point_location_test.json",
+        "2191_polygon_area.json",
+        "2195_convex_hull.json"
+    ]
+}

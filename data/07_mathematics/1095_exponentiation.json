@@ -1,0 +1,11 @@
+{
+    "id": "1095_exponentiation",
+    "title": "Exponentiation",
+    "source": "CSES 1095",
+    "statement": "Your task is to efficiently calculate values $a^b$ modulo $10^9+7$.",
+    "inputFormat": "The first input line contains an integer $n$: the number of calculations.\nAfter this, there are $n$ lines, each containing two integers $a$ and $b$.",
+    "outputFormat": "Print each value $a^b$ modulo $10^9+7$.",
+    "exampleInput": "3\n3 4\n2 8\n123 123",
+    "exampleOutput": "81\n256\n921450052",
+    "constraints": "<ul>\n<li>$1 \\le n \\le 2 \\cdot 10^5$</li>\n<li>$0 \\le a,b \\le 10^9$</li>\n</ul>"
+}

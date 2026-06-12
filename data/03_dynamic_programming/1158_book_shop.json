@@ -1,0 +1,11 @@
+{
+    "id": "1158_book_shop",
+    "title": "Book Shop",
+    "source": "CSES 1158",
+    "statement": "You are in a book shop which sells $n$ different books. You have decided that the total price of your purchases will be at most $x$. What is the maximum number of pages you can buy?",
+    "inputFormat": "The first line contains two integers $n$ and $x$.\nThe next line contains $n$ integers $h_1, h_2, \\dots, h_n$.\nThe last line contains $n$ integers $s_1, s_2, \\dots, s_n$.",
+    "outputFormat": "Print one integer: the maximum number of pages.",
+    "constraints": "<ul><li>$1 \\le n \\le 1000$</li><li>$1 \\le x \\le 10^5$</li><li>$1 \\le h_i, s_i \\le 1000$</li></ul>",
+    "exampleInput": "4 10\n4 8 5 3\n5 12 8 1",
+    "exampleOutput": "13"
+}

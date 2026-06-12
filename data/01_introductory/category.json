@@ -1,0 +1,11 @@
+{
+    "title": "Introductory Problems",
+    "subtitle": "Các bài toán nhập môn",
+    "content": "<ul><li>Kiến thức cơ bản về vòng lặp, mảng, và chuỗi.</li><li>Thuật toán quay lui (Backtracking).</li><li>Khởi động tư duy lập trình thi đấu.</li></ul>",
+    "problems": [
+        "1068_weird_algorithm.json",
+        "1083_missing_number.json",
+        "1624_chessboard_and_queens.json",
+        "1069_repetitions.json"
+    ]
+}

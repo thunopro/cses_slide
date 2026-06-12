@@ -1,0 +1,11 @@
+{
+    "id": "1621_distinct_numbers",
+    "title": "Distinct Numbers",
+    "source": "CSES 1621",
+    "statement": "You are given a list of $n$ integers, and your task is to calculate the number of distinct values in the list.",
+    "inputFormat": "The first input line has an integer $n$: the number of values.\nThe second line has $n$ integers $x_1,x_2,\\ldots,x_n$.",
+    "outputFormat": "Print one integers: the number of distinct values.",
+    "exampleInput": "5\n2 3 2 2 3",
+    "exampleOutput": "2",
+    "constraints": "<ul>\n<li>$1 \\le n \\le 2 \\cdot 10^5$</li>\n<li>$1 \\le x_i \\le 10^9$</li>\n</ul>"
+}

@@ -1,0 +1,10 @@
+{
+    "title": "Tree Algorithms",
+    "subtitle": "Thuật toán trên Cây",
+    "content": "<ul><li>Đường kính của cây và khoảng cách các nút.</li><li>Tổ tiên chung gần nhất (LCA - Lowest Common Ancestor).</li><li>Quy hoạch động trên cây (Tree DP).</li></ul>",
+    "problems": [
+        "1674_subordinates.json",
+        "1131_tree_diameter.json",
+        "1688_company_queries_ii.json"
+    ]
+}

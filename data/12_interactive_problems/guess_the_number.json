@@ -1,0 +1,11 @@
+{
+    "id": "guess_the_number",
+    "title": "Guess the Number",
+    "source": "Interactive Example",
+    "statement": "In this problem, there is a hidden integer $x$ such that $1 \\le x \\le 10^6$. You can make up to $50$ queries.\nIn each query, you can ask if $x \\ge y$. The grader will answer \"YES\" or \"NO\".",
+    "inputFormat": "This is an interactive problem. You do not read the size of the input.",
+    "outputFormat": "To guess the number, print \"! x\" and terminate your program.",
+    "exampleInput": "YES\nNO\nYES",
+    "exampleOutput": "? 500000\n? 750000\n? 625000",
+    "constraints": "<ul>\n<li>$1 \\le x \\le 10^6$</li>\n</ul>"
+}

@@ -1,0 +1,11 @@
+{
+    "id": "1675_road_reparation",
+    "title": "Road Reparation",
+    "source": "CSES 1675",
+    "statement": "There are $n$ cities and $m$ roads between them. Your task is to repair some of the roads so that there will be a decent route between any two cities.",
+    "inputFormat": "The first input line has two integers $n$ and $m$.\nThen, there are $m$ lines describing the roads.",
+    "outputFormat": "Print one integer: the minimum total reparation cost.",
+    "constraints": "<ul><li>$1 \\le n \\le 10^5$</li><li>$1 \\le m \\le 2 \\cdot 10^5$</li></ul>",
+    "exampleInput": "5 6\n1 2 3\n2 3 5\n2 4 2\n3 4 8\n5 1 7\n5 4 4",
+    "exampleOutput": "14"
+}

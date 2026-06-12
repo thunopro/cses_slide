@@ -1,0 +1,12 @@
+{
+    "id": "1069_repetitions",
+    "title": "Repetitions",
+    "source": "CSES 1069",
+    "statement": "You are given a DNA sequence: a string consisting of characters A, C, G, and T. Your task is to find the longest repetition in the sequence. This is a maximum-length substring containing only one type of character.",
+    "inputFormat": "The only input line contains a string of $n$ characters.",
+    "outputFormat": "Print one integer: the length of the longest repetition.",
+    "constraints": "<ul><li>$1 \\le n \\le 10^6$</li></ul>",
+    "exampleInput": "ATTCGGGG",
+    "exampleOutput": "4",
+    "sampleCode": "string s ; \n\nsigned main () \n{\n    ios_base::sync_with_stdio(0); \n    cin.tie(0);cout.tie(0); \n    cin >> s ; \n    int res = 1 , cnt = 0 ; \n    char last = 'x' ; \n    for ( auto x : s ) \n    {\n        cnt = (last == x) ? cnt + 1 : 1 ; \n        last = x ; \n        chkmax (res,cnt) ; \n    }\n    cout << res ; \n    return 0;\n}"
+}

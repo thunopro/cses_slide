@@ -1,0 +1,11 @@
+{
+    "id": "2189_point_location_test",
+    "title": "Point Location Test",
+    "source": "CSES 2189",
+    "statement": "There is a line that goes through the points $p_1=(x_1,y_1)$ and $p_2=(x_2,y_2)$. There is also a point $p_3=(x_3,y_3)$.\nYour task is to determine whether $p_3$ is located on the left or right side of the line or if it touches the line when we are looking from $p_1$ to $p_2$.",
+    "inputFormat": "The first input line has an integer $t$: the number of tests.\nAfter this, there are $t$ lines. Each line has six integers $x_1$, $y_1$, $x_2$, $y_2$, $x_3$ and $y_3$.",
+    "outputFormat": "For each test, print \"LEFT\", \"RIGHT\" or \"TOUCH\".",
+    "exampleInput": "3\n1 1 5 3 2 3\n1 1 5 3 4 1\n1 1 5 3 3 2",
+    "exampleOutput": "LEFT\nRIGHT\nTOUCH",
+    "constraints": "<ul>\n<li>$1 \\le t \\le 10^5$</li>\n<li>$-10^9 \\le x_i, y_i \\le 10^9$</li>\n</ul>"
+}

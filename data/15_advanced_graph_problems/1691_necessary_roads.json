@@ -1,0 +1,11 @@
+{
+    "id": "1691_necessary_roads",
+    "title": "Necessary Roads",
+    "source": "CSES 1691",
+    "statement": "There are $n$ cities and $m$ roads. A road is necessary if its removal would disconnect the network. Find all necessary roads (bridges).",
+    "inputFormat": "The first line has two integers $n$ and $m$.\nThen there are $m$ lines describing the roads.",
+    "outputFormat": "First print an integer $k$: the number of necessary roads. Then, print $k$ lines describing the roads.",
+    "constraints": "<ul><li>$1 \\le n \\le 10^5$</li><li>$1 \\le m \\le 2 \\cdot 10^5$</li></ul>",
+    "exampleInput": "5 5\n1 2\n1 4\n2 4\n3 5\n4 5",
+    "exampleOutput": "1\n3 5"
+}

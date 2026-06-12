@@ -1,0 +1,11 @@
+{
+    "id": "1638_grid_paths",
+    "title": "Grid Paths",
+    "source": "CSES 1638",
+    "statement": "Consider an $n \\times n$ grid whose squares may have traps. Your task is to calculate the number of paths from the upper-left square to the lower-right square.",
+    "inputFormat": "The first input line has an integer $n$.\nAfter this, there are $n$ lines that describe the grid.",
+    "outputFormat": "Print the number of paths modulo $10^9+7$.",
+    "constraints": "<ul><li>$1 \\le n \\le 1000$</li></ul>",
+    "exampleInput": "4\n....\n.*..\n...*\n....",
+    "exampleOutput": "3"
+}

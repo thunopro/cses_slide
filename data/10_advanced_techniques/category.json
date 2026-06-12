@@ -1,0 +1,9 @@
+{
+    "title": "Advanced Techniques",
+    "subtitle": "Các kỹ thuật nâng cao",
+    "content": "<ul><li>Quy hoạch động Bitmask (DP on Subsets).</li><li>Meet-in-the-middle.</li><li>Chia căn (Mo's Algorithm) và Centroid Decomposition.</li></ul>",
+    "problems": [
+        "1628_meet_in_the_middle.json",
+        "1690_hamiltonian_flights.json"
+    ]
+}

@@ -1,0 +1,9 @@
+{
+    "title": "Sliding Window Problems",
+    "subtitle": "Cửa sổ trượt",
+    "content": "<ul><li>Xử lý bài toán trên các đoạn con liên tiếp.</li><li>Sử dụng Monotonic Queue và Deque.</li></ul>",
+    "problems": [
+        "1076_sliding_window_median.json",
+        "1077_sliding_window_cost.json"
+    ]
+}

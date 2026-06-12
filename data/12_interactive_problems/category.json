@@ -1,0 +1,8 @@
+{
+    "title": "Interactive Problems",
+    "subtitle": "Bài toán tương tác",
+    "content": "<ul><li>Tương tác trực tiếp với chương trình chấm (Grader).</li><li>Tối ưu hóa số lượng truy vấn.</li></ul>",
+    "problems": [
+        "guess_the_number.json"
+    ]
+}

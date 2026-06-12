@@ -1,0 +1,11 @@
+{
+    "id": "1633_dice_combinations",
+    "title": "Dice Combinations",
+    "source": "CSES 1633",
+    "statement": "Your task is to count the number of ways to construct sum $n$ by throwing a dice one or more times. Each throw produces an outcome between $1$ and $6$.",
+    "inputFormat": "The only input line has an integer $n$.",
+    "outputFormat": "Print the number of ways modulo $10^9+7$.",
+    "exampleInput": "3",
+    "exampleOutput": "4",
+    "constraints": "<ul>\n<li>$1 \\le n \\le 10^6$</li>\n</ul>"
+}

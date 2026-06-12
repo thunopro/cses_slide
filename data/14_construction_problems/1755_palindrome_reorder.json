@@ -1,0 +1,11 @@
+{
+    "id": "1755_palindrome_reorder",
+    "title": "Palindrome Reorder",
+    "source": "CSES 1755",
+    "statement": "Given a string, your task is to reorder its characters so that it becomes a palindrome (i.e., it reads the same forwards and backwards).",
+    "inputFormat": "The only input line has a string of length $n$ consisting of characters A–Z.",
+    "outputFormat": "Print a palindrome consisting of the characters of the original string. You may print any valid solution. If there are no solutions, print \"NO SOLUTION\".",
+    "exampleInput": "AAAACACBA",
+    "exampleOutput": "AACABACAA",
+    "constraints": "<ul>\n<li>$1 \\le n \\le 10^6$</li>\n</ul>"
+}

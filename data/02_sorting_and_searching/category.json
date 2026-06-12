@@ -1,0 +1,10 @@
+{
+    "title": "Sorting and Searching",
+    "subtitle": "Sắp xếp và Tìm kiếm",
+    "content": "<ul><li>Tìm kiếm nhị phân (Binary Search).</li><li>Kỹ thuật Two Pointers, Sweep Line.</li><li>Sử dụng thành thạo Set, Map và Custom Sorting.</li></ul>",
+    "problems": [
+        "1621_distinct_numbers.json",
+        "1620_factory_machines.json",
+        "1640_sum_of_two_values.json"
+    ]
+}

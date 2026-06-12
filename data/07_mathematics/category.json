@@ -1,0 +1,10 @@
+{
+    "title": "Mathematics",
+    "subtitle": "Toán học và Số học",
+    "content": "<ul><li>Số học Modular, Lũy thừa ma trận.</li><li>Lý thuyết số: Sàng nguyên tố, Ước chung.</li><li>Tổ hợp, hoán vị và Công thức bao hàm - loại trừ.</li></ul>",
+    "problems": [
+        "1095_exponentiation.json",
+        "1081_common_divisors.json",
+        "1079_binomial_coefficients.json"
+    ]
+}

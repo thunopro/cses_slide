@@ -1,0 +1,12 @@
+{
+    "id": "1624_chessboard_and_queens",
+    "title": "Chessboard and Queens",
+    "source": "CSES 1624",
+    "statement": "Your task is to place eight queens on a chessboard so that no two queens are attacking each other. As an additional challenge, each square is either free or reserved, and you can only place queens on the free squares. However, the reserved squares do not prevent queens from attacking each other.\n\nHow many possible ways are there to place the queens?",
+    "inputFormat": "The input has eight lines, and each of them has eight characters. Each square is either free (`.`) or reserved (`*`).",
+    "outputFormat": "Print one integer: the number of ways you can place the queens.",
+    "constraints": "<ul>\n<li>The grid is exactly $8 \\times 8$.</li>\n</ul>",
+    "exampleInput": "........\n........\n..*.....\n........\n........\n.....**.\n...*....\n........",
+    "exampleOutput": "65",
+    "sampleCode": "int n ; \nchar a [9][9] ; \nint cross1 [maxn] , cross2 [maxn] , column [maxn] ; \nint res = 0 ; \n\nvoid backtrack ( int pos ) \n{\n    if ( pos > n ) \n    {\n        res ++ ; return ; \n    }\n    for ( int i = 1 ; i <= n ; i ++ ) \n    {\n        if ( column [i] || cross1 [pos+i] || cross2 [pos-i+8] || a [pos][i] == '*' ) continue ; \n        column [i] = cross1 [pos+i] = cross2 [pos-i+8] = true ; \n        backtrack (pos+1) ; \n        column [i] = cross1 [pos+i] = cross2 [pos-i+8] = false ; \n    }\n}\nsigned main () \n{\n    ios_base::sync_with_stdio(0); \n    cin.tie(0);cout.tie(0); \n    n = 8 ; \n    for ( int i = 1 ; i <= n ; i ++ ) for ( int j = 1 ; j <= n ; j ++ ) cin >> a [i][j] ; \n    backtrack (1) ; \n    cout << res ; \n    return 0;\n}"
+}

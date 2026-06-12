@@ -1,0 +1,11 @@
+{
+    "id": "1715_creating_strings_ii",
+    "title": "Creating Strings II",
+    "source": "CSES 1715",
+    "statement": "Given a string, your task is to calculate the number of different strings that can be created using its characters.",
+    "inputFormat": "The only input line has a string of length $n$.",
+    "outputFormat": "Print the number of different strings modulo $10^9+7$.",
+    "constraints": "<ul><li>$1 \\le n \\le 10^6$</li></ul>",
+    "exampleInput": "aabac",
+    "exampleOutput": "20"
+}

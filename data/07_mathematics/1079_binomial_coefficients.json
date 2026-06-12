@@ -1,0 +1,11 @@
+{
+    "id": "1079_binomial_coefficients",
+    "title": "Binomial Coefficients",
+    "source": "CSES 1079",
+    "statement": "Your task is to calculate $n$ binomial coefficients modulo $10^9+7$.",
+    "inputFormat": "The first input line contains an integer $n$.\nAfter this, there are $n$ lines, each containing two integers $a$ and $b$.",
+    "outputFormat": "Print each binomial coefficient modulo $10^9+7$.",
+    "constraints": "<ul><li>$1 \\le n \\le 10^5$</li><li>$1 \\le b \\le a \\le 10^6$</li></ul>",
+    "exampleInput": "3\n5 3\n8 1\n9 5",
+    "exampleOutput": "10\n8\n126"
+}

@@ -1,0 +1,10 @@
+{
+    "title": "Dynamic Programming",
+    "subtitle": "Quy hoạch động",
+    "content": "<ul><li>Bài toán cái túi (Knapsack), Dãy con tăng dài nhất (LIS).</li><li>Quy hoạch động trên lưới và trên mảng 2D.</li><li>Tối ưu bài toán bằng mảng trạng thái.</li></ul>",
+    "problems": [
+        "1633_dice_combinations.json",
+        "1158_book_shop.json",
+        "1638_grid_paths.json"
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "id": "1081_common_divisors",
+    "title": "Common Divisors",
+    "source": "CSES 1081",
+    "statement": "Given an array of $n$ positive integers, your task is to find two integers such that their greatest common divisor is as large as possible.",
+    "inputFormat": "The first input line has an integer $n$.\nThe second line has $n$ integers.",
+    "outputFormat": "Print the maximum greatest common divisor.",
+    "constraints": "<ul><li>$2 \\le n \\le 2 \\cdot 10^5$</li><li>$1 \\le x_i \\le 10^6$</li></ul>",
+    "exampleInput": "5\n3 14 15 7 9",
+    "exampleOutput": "7"
+}

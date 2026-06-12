@@ -1,0 +1,11 @@
+{
+    "id": "1731_word_combinations",
+    "title": "Word Combinations",
+    "source": "CSES 1731",
+    "statement": "You are given a string of length $n$ and a dictionary containing $k$ words. In how many ways can you create the string using the words?",
+    "inputFormat": "The first line has a string of length $n$.\nThe second line has an integer $k$.\nThen there are $k$ lines describing the dictionary.",
+    "outputFormat": "Print the number of ways modulo $10^9+7$.",
+    "constraints": "<ul><li>$1 \\le n \\le 5000$</li><li>$1 \\le k \\le 10^5$</li></ul>",
+    "exampleInput": "ababc\n4\nab\nabab\nc\ncb",
+    "exampleOutput": "2"
+}

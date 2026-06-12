@@ -1,0 +1,11 @@
+{
+    "id": "1716_distributing_apples",
+    "title": "Distributing Apples",
+    "source": "CSES 1716",
+    "statement": "There are $n$ children and $m$ apples that will be distributed to them. In how many ways can you do this?",
+    "inputFormat": "The only input line has two integers $n$ and $m$.",
+    "outputFormat": "Print the number of ways modulo $10^9+7$.",
+    "constraints": "<ul><li>$1 \\le n, m \\le 10^6$</li></ul>",
+    "exampleInput": "3 2",
+    "exampleOutput": "6"
+}

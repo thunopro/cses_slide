@@ -1,0 +1,18 @@
+[
+    "01_introductory",
+    "02_sorting_and_searching",
+    "03_dynamic_programming",
+    "04_graph_algorithms",
+    "05_range_queries",
+    "06_tree_algorithms",
+    "07_mathematics",
+    "08_string_algorithms",
+    "09_geometry",
+    "10_advanced_techniques",
+    "11_sliding_window_problems",
+    "12_interactive_problems",
+    "13_bitwise_operations",
+    "14_construction_problems",
+    "15_advanced_graph_problems",
+    "16_counting_problems"
+]

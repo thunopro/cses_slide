@@ -1,0 +1,11 @@
+{
+    "id": "1628_meet_in_the_middle",
+    "title": "Meet in the Middle",
+    "source": "CSES 1628",
+    "statement": "You are given an array of $n$ numbers. In how many ways can you choose a subset of the numbers with sum $x$?",
+    "inputFormat": "The first input line has two numbers $n$ and $x$: the array size and the required sum.\nThe second line has $n$ integers $t_1, t_2, \\dots, t_n$: the numbers in the array.",
+    "outputFormat": "Print the number of ways you can create the sum $x$.",
+    "exampleInput": "4 5\n1 2 3 2",
+    "exampleOutput": "3",
+    "constraints": "<ul>\n<li>$1 \\le n \\le 40$</li>\n<li>$1 \\le x \\le 10^9$</li>\n<li>$1 \\le t_i \\le 10^9$</li>\n</ul>"
+}

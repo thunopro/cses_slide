@@ -1,0 +1,11 @@
+{
+    "id": "2191_polygon_area",
+    "title": "Polygon Area",
+    "source": "CSES 2191",
+    "statement": "Your task is to calculate the area of a given polygon. The polygon consists of $n$ vertices $(x_1,y_1), (x_2,y_2), \\dots, (x_n,y_n)$.",
+    "inputFormat": "The first line has an integer $n$.\nAfter this, there are $n$ lines that describe the vertices.",
+    "outputFormat": "Print the area of the polygon multiplied by 2 (an integer).",
+    "constraints": "<ul><li>$3 \\le n \\le 1000$</li></ul>",
+    "exampleInput": "4\n1 1\n4 2\n3 5\n1 4",
+    "exampleOutput": "16"
+}

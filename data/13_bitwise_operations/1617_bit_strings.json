@@ -1,0 +1,11 @@
+{
+    "id": "1617_bit_strings",
+    "title": "Bit Strings",
+    "source": "CSES 1617",
+    "statement": "Your task is to calculate the number of bit strings of length $n$.",
+    "inputFormat": "The only input line has an integer $n$.",
+    "outputFormat": "Print the result modulo $10^9+7$.",
+    "constraints": "<ul><li>$1 \\le n \\le 10^6$</li></ul>",
+    "exampleInput": "3",
+    "exampleOutput": "8"
+}

@@ -1,0 +1,9 @@
+{
+    "title": "Counting Problems",
+    "subtitle": "Bài toán đếm",
+    "content": "<ul><li>Đếm số lượng cấu hình, số lượng cách sắp xếp.</li><li>Sử dụng Toán tổ hợp và Quy hoạch động.</li></ul>",
+    "problems": [
+        "1713_counting_divisors.json",
+        "1716_distributing_apples.json"
+    ]
+}

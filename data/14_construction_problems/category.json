@@ -1,0 +1,9 @@
+{
+    "title": "Construction Problems",
+    "subtitle": "Bài toán cấu tạo",
+    "content": "<ul><li>Xây dựng kết quả thỏa mãn một số điều kiện nhất định.</li><li>Yêu cầu khả năng quan sát và phân tích logic tốt.</li></ul>",
+    "problems": [
+        "1755_palindrome_reorder.json",
+        "1715_creating_strings_ii.json"
+    ]
+}

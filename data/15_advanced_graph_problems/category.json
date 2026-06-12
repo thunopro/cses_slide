@@ -1,0 +1,10 @@
+{
+    "title": "Advanced Graph Problems",
+    "subtitle": "Đồ thị nâng cao",
+    "content": "<ul><li>Luồng cực đại (Max Flow) và Lát cắt cực tiểu (Min Cut).</li><li>Khớp và cầu trong đồ thị (Bridges & Articulation points).</li><li>Chu trình Euler và Hamilton.</li></ul>",
+    "problems": [
+        "1694_download_speed.json",
+        "1691_necessary_roads.json",
+        "1693_mail_delivery.json"
+    ]
+}

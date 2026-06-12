@@ -1,0 +1,11 @@
+{
+    "id": "1671_shortest_routes_i",
+    "title": "Shortest Routes I",
+    "source": "CSES 1671",
+    "statement": "There are $n$ cities and $m$ flight connections between them. Your task is to determine the length of the shortest route from Syrjälä to every city.",
+    "inputFormat": "The first input line has two integers $n$ and $m$.\nAfter this, there are $m$ lines describing the flight connections.",
+    "outputFormat": "Print $n$ integers: the shortest route lengths.",
+    "constraints": "<ul><li>$1 \\le n \\le 10^5$</li><li>$1 \\le m \\le 2 \\cdot 10^5$</li><li>$1 \\le a,b \\le n$</li><li>$1 \\le c \\le 10^9$</li></ul>",
+    "exampleInput": "3 4\n1 2 6\n1 3 2\n3 2 3\n1 3 4",
+    "exampleOutput": "0 5 2"
+}

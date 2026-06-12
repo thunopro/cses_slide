@@ -1,0 +1,11 @@
+{
+    "id": "1076_sliding_window_median",
+    "title": "Sliding Window Median",
+    "source": "CSES 1076",
+    "statement": "You are given an array of $n$ integers. Your task is to calculate the median of each window of $k$ elements, from left to right.",
+    "inputFormat": "The first input line contains two integers $n$ and $k$: the number of elements and the size of the window.\nThen there are $n$ integers $x_1, x_2, \\dots, x_n$: the contents of the array.",
+    "outputFormat": "Print $n - k + 1$ values: the medians.",
+    "exampleInput": "8 3\n2 4 3 5 8 1 2 1",
+    "exampleOutput": "3 4 5 5 2 1",
+    "constraints": "<ul>\n<li>$1 \\le k \\le n \\le 2 \\cdot 10^5$</li>\n<li>$1 \\le x_i \\le 10^9$</li>\n</ul>"
+}

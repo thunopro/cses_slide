@@ -1,0 +1,9 @@
+{
+    "title": "Bitwise Operations",
+    "subtitle": "Thao tác Bit",
+    "content": "<ul><li>Sử dụng AND, OR, XOR để tối ưu thuật toán.</li><li>Giải các bài toán trạng thái bằng bit.</li></ul>",
+    "problems": [
+        "1623_apple_division.json",
+        "1617_bit_strings.json"
+    ]
+}

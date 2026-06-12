@@ -1,0 +1,11 @@
+{
+    "id": "1077_sliding_window_cost",
+    "title": "Sliding Window Cost",
+    "source": "CSES 1077",
+    "statement": "You are given an array of $n$ integers. For each window of size $k$, you want to make all elements equal. What is the minimum total cost?",
+    "inputFormat": "The first line contains two integers $n$ and $k$.\nThen there are $n$ integers $x_1, \\dots, x_n$.",
+    "outputFormat": "Print $n-k+1$ values: the costs.",
+    "constraints": "<ul><li>$1 \\le k \\le n \\le 2 \\cdot 10^5$</li></ul>",
+    "exampleInput": "8 3\n2 4 3 5 8 1 2 1",
+    "exampleOutput": "2 2 2 7 7 1"
+}

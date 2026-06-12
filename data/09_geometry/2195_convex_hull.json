@@ -1,0 +1,11 @@
+{
+    "id": "2195_convex_hull",
+    "title": "Convex Hull",
+    "source": "CSES 2195",
+    "statement": "Given a set of $n$ points, your task is to find the convex hull of the points.",
+    "inputFormat": "The first input line has an integer $n$: the number of points.\nAfter this, there are $n$ lines that describe the points. Each line has two integers $x$ and $y$.",
+    "outputFormat": "First print an integer $k$: the number of points in the convex hull.\nThen print $k$ lines that describe the points.",
+    "constraints": "<ul><li>$3 \\le n \\le 2 \\cdot 10^5$</li></ul>",
+    "exampleInput": "6\n2 1\n2 5\n3 3\n4 3\n4 4\n6 3",
+    "exampleOutput": "4\n2 1\n6 3\n4 4\n2 5"
+}

@@ -1,0 +1,11 @@
+{
+    "id": "1674_subordinates",
+    "title": "Subordinates",
+    "source": "CSES 1674",
+    "statement": "Given the structure of a company, your task is to calculate for each employee the number of their subordinates.",
+    "inputFormat": "The first input line has an integer $n$: the number of employees. The employees are numbered $1,2,\\dots,n$, and employee $1$ is the general director of the company.\nAfter this, there are $n-1$ integers: for each employee $2,3,\\dots,n$ their direct boss in the company.",
+    "outputFormat": "Print $n$ integers: for each employee $1,2,\\dots,n$ the number of their subordinates.",
+    "exampleInput": "5\n1 1 2 3",
+    "exampleOutput": "4 1 1 0 0",
+    "constraints": "<ul>\n<li>$1 \\le n \\le 2 \\cdot 10^5$</li>\n</ul>"
+}

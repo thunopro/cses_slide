@@ -1,0 +1,10 @@
+{
+    "title": "Graph Algorithms",
+    "subtitle": "Thuật toán Đồ thị",
+    "content": "<ul><li>Duyệt đồ thị BFS, DFS và Flood Fill.</li><li>Đường đi ngắn nhất: Dijkstra, Bellman-Ford, Floyd-Warshall.</li><li>Cây khung nhỏ nhất (MST) và Topological Sort.</li></ul>",
+    "problems": [
+        "1193_labyrinth.json",
+        "1671_shortest_routes_i.json",
+        "1675_road_reparation.json"
+    ]
+}
