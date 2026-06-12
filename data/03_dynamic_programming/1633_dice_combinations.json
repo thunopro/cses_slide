@@ -2,10 +2,11 @@
     "id": "1633_dice_combinations",
     "title": "Dice Combinations",
     "source": "CSES 1633",
-    "statement": "Your task is to count the number of ways to construct sum $n$ by throwing a dice one or more times. Each throw produces an outcome between $1$ and $6$.",
+    "statement": "Your task is to count the number of ways to construct sum $n$ by throwing a dice one or more times. Each throw produces an outcome between $1$ and $6$.\n\nFor example, if $n=3$, there are $4$ ways:\n<ul>\n<li>$1+1+1$</li>\n<li>$1+2$</li>\n<li>$2+1$</li>\n<li>$3$</li>\n</ul>",
     "inputFormat": "The only input line has an integer $n$.",
     "outputFormat": "Print the number of ways modulo $10^9+7$.",
     "exampleInput": "3",
     "exampleOutput": "4",
-    "constraints": "<ul>\n<li>$1 \\le n \\le 10^6$</li>\n</ul>"
+    "constraints": "<ul>\n<li>$1 \\le n \\le 10^6$</li>\n</ul>",
+    "sampleCode": "int n ; \nint dp [maxn] ;\nsigned main () \n{\n    ios_base::sync_with_stdio(0); \n    cin.tie(0);cout.tie(0); \n    cin >> n ; \n    dp [0] = 1 ; \n    for ( int i = 1 ; i <= n ; i ++ ) \n    {\n        for ( int j = max (i-6,0ll) ; j < i ; j ++ ) add (dp[i],dp[j]) ; \n    }\n    cout << dp [n] ; \n    return 0;\n}"
 }

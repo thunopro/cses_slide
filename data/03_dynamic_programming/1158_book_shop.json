@@ -2,10 +2,11 @@
     "id": "1158_book_shop",
     "title": "Book Shop",
     "source": "CSES 1158",
-    "statement": "You are in a book shop which sells $n$ different books. You have decided that the total price of your purchases will be at most $x$. What is the maximum number of pages you can buy?",
-    "inputFormat": "The first line contains two integers $n$ and $x$.\nThe next line contains $n$ integers $h_1, h_2, \\dots, h_n$.\nThe last line contains $n$ integers $s_1, s_2, \\dots, s_n$.",
+    "statement": "You are in a book shop which sells $n$ different books. You know the price and number of pages of each book.\n\nYou have decided that the total price of your purchases will be at most $x$. What is the maximum number of pages you can buy? You can buy each book at most once.",
+    "inputFormat": "The first input line contains two integers $n$ and $x$: the number of books and the maximum total price.\nThe next line contains $n$ integers $h_1, h_2, \\dots, h_n$: the price of each book.\nThe last line contains $n$ integers $s_1, s_2, \\dots, s_n$: the number of pages of each book.",
     "outputFormat": "Print one integer: the maximum number of pages.",
     "constraints": "<ul><li>$1 \\le n \\le 1000$</li><li>$1 \\le x \\le 10^5$</li><li>$1 \\le h_i, s_i \\le 1000$</li></ul>",
     "exampleInput": "4 10\n4 8 5 3\n5 12 8 1",
-    "exampleOutput": "13"
+    "exampleOutput": "13",
+    "sampleCode": "int n , weight ; \nint h [maxn] , w [maxn] ;\nint dp [maxn] ;  \nsigned main () \n{\n    ios_base::sync_with_stdio(0); \n    cin.tie(0);cout.tie(0); \n    cin >> n >> weight ; \n    for ( int i = 1 ; i <= n ; i ++ ) cin >> h [i] ; \n    for ( int i = 1 ; i <= n ; i ++ ) cin >> w [i] ; \n    memset(dp,-0x3f,sizeof dp) ; \n    dp [0] = 0 ; \n    for ( int i = 1 ; i <= n ; i ++ ) \n    {\n        for ( int j = weight ; j >= h [i] ; j -- ) chkmax (dp[j],dp[j-h[i]]+w[i]) ; \n    }\n    cout << *max_element(dp,dp+weight+1) ; \n    return 0;\n}"
 }

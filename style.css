@@ -34,31 +34,31 @@ body {
     height: 100vh;
     z-index: -1;
     overflow: hidden;
-    filter: blur(80px);
+    background-color: var(--bg-color);
 }
 
 .blob {
     position: absolute;
     border-radius: 50%;
-    opacity: 0.5;
+    opacity: 0.6;
     animation: float 20s infinite alternate cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .blob-1 {
     top: -10%;
     left: -10%;
-    width: 50vw;
-    height: 50vw;
-    background: var(--blob-1);
+    width: 60vw;
+    height: 60vw;
+    background: radial-gradient(circle, rgba(192, 132, 252, 0.3) 0%, rgba(192, 132, 252, 0) 70%);
     animation-delay: 0s;
 }
 
 .blob-2 {
     bottom: -10%;
     right: -10%;
-    width: 60vw;
-    height: 60vw;
-    background: var(--blob-2);
+    width: 70vw;
+    height: 70vw;
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.3) 0%, rgba(59, 130, 246, 0) 70%);
     animation-delay: -5s;
 }
 
@@ -294,7 +294,8 @@ button svg {
     left: 0;
     width: 100vw; 
     height: 100vh;
-    background: var(--bg-color);
+    background: rgba(15, 23, 42, 0.85); /* Semi-transparent overlay */
+    backdrop-filter: blur(4px); /* Very lightweight blur */
     z-index: 100;
     display: flex;
     flex-direction: column;
@@ -326,6 +327,11 @@ button svg {
     max-width: 900px;
     margin: 0 auto;
     width: 100%;
+    background: #111827; /* Darker card background */
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
 }
 
 .cses-problem h2 {

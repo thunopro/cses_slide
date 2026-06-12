@@ -4,8 +4,9 @@
     "source": "CSES 1640",
     "statement": "You are given an array of $n$ integers, and your task is to find two values (at distinct positions) whose sum is $x$.",
     "inputFormat": "The first input line has two integers $n$ and $x$: the array size and the target sum.\nThe second line has $n$ integers $a_1, a_2, \\dots, a_n$.",
-    "outputFormat": "Print two integers: the positions of the values.",
+    "outputFormat": "Print two integers: the positions of the values. If there are several solutions, you may print any of them. If there are no solutions, print IMPOSSIBLE.",
     "constraints": "<ul><li>$1 \\le n \\le 2 \\cdot 10^5$</li><li>$1 \\le x, a_i \\le 10^9$</li></ul>",
     "exampleInput": "4 8\n2 7 5 1",
-    "exampleOutput": "2 4"
+    "exampleOutput": "2 4",
+    "sampleCode": "int n , k ; \nint a [maxn] ; \nsigned main () \n{\n    ios_base::sync_with_stdio(0); \n    cin.tie(0);cout.tie(0); \n    cin >> n >> k ; \n    map <int,int> mp ; \n    int First = -1 , Second = -1 ; \n    for ( int i = 1 ; i <= n ; i ++ )\n    {\n        cin >> a [i] ; \n        if ( mp [k-a[i]] ) First = mp [k-a[i]] , Second = i; \n        mp [a[i]] = i ; \n    } \n    if ( First == -1 ) cout << \"IMPOSSIBLE\" ; \n    else cout << First << \" \" << Second ; \n    return 0; \n}"
 }

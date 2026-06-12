@@ -2,10 +2,11 @@
     "id": "1620_factory_machines",
     "title": "Factory Machines",
     "source": "CSES 1620",
-    "statement": "A factory has $n$ machines which can be used to make products. Your goal is to make a total of $t$ products. What is the shortest time needed?",
+    "statement": "A factory has $n$ machines which can be used to make products. Your goal is to make a total of $t$ products.\n\nFor each machine, you know the number of seconds it needs to make a single product. The machines can work simultaneously, and you can freely decide their schedule.\n\nWhat is the shortest time needed to make $t$ products?",
     "inputFormat": "The first input line has two integers $n$ and $t$: the number of machines and products.\nThe next line has $n$ integers $k_1, k_2, \\dots, k_n$.",
     "outputFormat": "Print one integer: the minimum time needed to make $t$ products.",
     "constraints": "<ul><li>$1 \\le n \\le 2 \\cdot 10^5$</li><li>$1 \\le t \\le 10^9$</li><li>$1 \\le k_i \\le 10^9$</li></ul>",
     "exampleInput": "3 7\n3 2 5",
-    "exampleOutput": "8"
+    "exampleOutput": "8",
+    "sampleCode": "int n , m ; \nint a [maxn] ; \n\nbool check ( int hold ) \n{\n    int res = 0 ; \n    for ( int i = 1 ; i <= n ; i ++ ) res += hold / a [i] , chkmin (res,m); \n    return res >= m ; \n}\nsigned main () \n{\n    ios_base::sync_with_stdio(0); \n    cin.tie(0);cout.tie(0); \n    cin >> n >> m ; \n    for ( int i = 1 ; i <= n ; i ++ ) cin >> a [i] ; \n    int l = 0 , r = 1e18 , res ; \n    while ( l <= r ) \n    {\n        if (check(mid)) res = mid , r = mid - 1 ; \n        else l = mid + 1 ; \n    }\n    cout << res ; \n    return 0;\n}"
 }

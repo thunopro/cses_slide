@@ -2,10 +2,11 @@
     "id": "1671_shortest_routes_i",
     "title": "Shortest Routes I",
     "source": "CSES 1671",
-    "statement": "There are $n$ cities and $m$ flight connections between them. Your task is to determine the length of the shortest route from Syrjälä to every city.",
-    "inputFormat": "The first input line has two integers $n$ and $m$.\nAfter this, there are $m$ lines describing the flight connections.",
-    "outputFormat": "Print $n$ integers: the shortest route lengths.",
+    "statement": "There are $n$ cities and $m$ flight connections between them. Your task is to determine the length of the shortest route from Syrjälä to every city. Syrjälä is city $1$, and the other cities are numbered $2,3,\\dots,n$.",
+    "inputFormat": "The first input line has two integers $n$ and $m$: the number of cities and flight connections. The cities are numbered $1, 2, \\dots, n$, and city $1$ is Syrjälä.\nThen, there are $m$ lines describing the flight connections. Each line has three integers $a$, $b$, and $c$: a flight begins at city $a$, ends at city $b$, and its length is $c$. Each flight is a one-way flight.",
+    "outputFormat": "Print $n$ integers: the shortest route lengths from Syrjälä to cities $1, 2, \\dots, n$.",
     "constraints": "<ul><li>$1 \\le n \\le 10^5$</li><li>$1 \\le m \\le 2 \\cdot 10^5$</li><li>$1 \\le a,b \\le n$</li><li>$1 \\le c \\le 10^9$</li></ul>",
     "exampleInput": "3 4\n1 2 6\n1 3 2\n3 2 3\n1 3 4",
-    "exampleOutput": "0 5 2"
+    "exampleOutput": "0 5 2",
+    "sampleCode": "int n , m ; \nvii adjList [maxn] ; \nint dp [maxn] ; \nstruct shape {\n    int u,d ; \n    bool operator < ( const shape &other ) const \n    {\n        return d > other.d ; \n    }\n}; \n\nsigned main () \n{\n    ios_base::sync_with_stdio(0); \n    cin.tie(0);cout.tie(0); \n    cin >> n >> m ; \n    for ( int i = 1 ; i <= m ; i ++ ) \n    {\n        int u,v,w ; cin >> u >> v >> w ; \n        adjList [u] . pb ({v,w}) ; \n    }\n\n    priority_queue<shape> S ; \n    memset (dp,0x3f,sizeof dp) ; \n    dp [1] = 0 ; \n    S . push ({1,dp[1]}) ; \n\n    while ( !S.empty()) \n    {\n        shape t = S.top() ; S.pop() ; \n        int u = t.u ; \n        if ( t.d != dp [u] ) continue ; \n        for ( auto [v,w] : adjList [u] ) \n        {\n            if ( dp [v] > dp [u] + w ) \n            {\n                S . push ({v,dp[v]=dp[u]+w}) ; \n            }\n        }\n    }\n    for ( int i = 1 ; i <= n ; i ++ ) cout << dp [i] << \" \" ; \n    return 0;\n}"
 }

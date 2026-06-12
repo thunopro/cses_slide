@@ -2,10 +2,11 @@
     "id": "1638_grid_paths",
     "title": "Grid Paths",
     "source": "CSES 1638",
-    "statement": "Consider an $n \\times n$ grid whose squares may have traps. Your task is to calculate the number of paths from the upper-left square to the lower-right square.",
-    "inputFormat": "The first input line has an integer $n$.\nAfter this, there are $n$ lines that describe the grid.",
+    "statement": "Consider an $n \\times n$ grid whose squares may have traps. It is not allowed to move to a square with a trap.\n\nYour task is to calculate the number of paths from the upper-left square to the lower-right square. You can only move right or down.",
+    "inputFormat": "The first input line has an integer $n$: the size of the grid.\nAfter this, there are $n$ lines that describe the grid. Each line has $n$ characters: `.` denotes an empty cell, and `*` denotes a trap.",
     "outputFormat": "Print the number of paths modulo $10^9+7$.",
     "constraints": "<ul><li>$1 \\le n \\le 1000$</li></ul>",
     "exampleInput": "4\n....\n.*..\n...*\n....",
-    "exampleOutput": "3"
+    "exampleOutput": "3",
+    "sampleCode": "int n ; \nchar a [maxn][maxn] ;\nint dp [maxn][maxn] ;  \nsigned main () \n{\n    ios_base::sync_with_stdio(0); \n    cin.tie(0);cout.tie(0); \n    cin >> n ; \n    for ( int i = 1 ; i <= n ; i ++ ) for ( int j = 1 ; j <= n ; j ++ ) cin >> a [i][j] ; \n    dp [1][1] = (a[1][1] == '.') ; \n    for ( int i = 1 ; i <= n ; i ++ ) for ( int j = 1 ; j <= n ; j ++ ) \n    {\n        if ( a [i][j] == '*' ) continue ; \n        if ( i > 1 ) add (dp[i][j],dp[i-1][j]) ; \n        if ( j > 1 ) add (dp[i][j],dp[i][j-1]) ; \n    }\n    cout << dp [n][n] ; \n    return 0;\n}"
 }

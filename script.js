@@ -239,5 +239,12 @@ closeChildBtn.addEventListener('click', () => {
     isChildSlideOpen = false;
 });
 
+// Close when clicking outside the main content card
+childSlideContainer.addEventListener('click', (e) => {
+    if (!e.target.closest('.cses-problem') && !e.target.closest('#closeChildBtn')) {
+        closeChildBtn.click();
+    }
+});
+
 // Start loading data
 loadData();
