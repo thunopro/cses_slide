@@ -399,9 +399,22 @@ button svg {
 /* Responsive Design */
 @media (max-width: 1024px) {
     .slide {
-        grid-template-columns: 1fr;
-        padding: 4rem 5vw 8rem;
-        gap: 2rem;
+        display: flex;
+        flex-direction: column;
+        padding: 4rem 5vw 6rem;
+        gap: 1.5rem;
+    }
+    
+    .slide-left {
+        flex: 0 0 auto;
+    }
+    
+    .slide-right {
+        flex: 1 1 auto;
+        min-height: 0;
+        max-height: none;
+        width: 100%;
+        overflow-y: auto;
     }
     
     .slide-title {
@@ -411,15 +424,11 @@ button svg {
     .slide-content {
         font-size: 1.25rem;
     }
-    
-    .slide-right {
-        max-height: 40vh;
-    }
 }
 
 @media (max-width: 768px) {
     .slide {
-        padding: 2rem 5vw 6rem;
+        padding: 2rem 5vw 5rem;
         gap: 1.5rem;
     }
 
@@ -476,7 +485,6 @@ button svg {
     }
     
     .slide-right {
-        max-height: 45vh;
         padding: 1.5rem;
     }
     

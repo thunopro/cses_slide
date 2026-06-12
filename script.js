@@ -249,3 +249,29 @@ childSlideContainer.addEventListener('click', (e) => {
 
 // Start loading data
 loadData();
+
+// Swipe Gestures for Mobile
+let touchStartX = 0;
+let touchEndX = 0;
+
+document.addEventListener('touchstart', e => {
+    touchStartX = e.changedTouches[0].screenX;
+}, {passive: true});
+
+document.addEventListener('touchend', e => {
+    touchEndX = e.changedTouches[0].screenX;
+    handleSwipe();
+}, {passive: true});
+
+function handleSwipe() {
+    // Disable swipe if the child slide is open
+    if (isChildSlideOpen) return;
+    
+    const swipeThreshold = 50; // minimum swipe distance to trigger
+    if (touchEndX < touchStartX - swipeThreshold) {
+        nextSlide();
+    }
+    if (touchEndX > touchStartX + swipeThreshold) {
+        prevSlide();
+    }
+}
