@@ -201,12 +201,19 @@ window.openChildSlide = function(slideIdx, probIdx) {
             </div>
             
             <div style="margin-top: 3rem; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem; padding-bottom: 2rem;">
-                <button id="toggleCodeBtn" class="toggle-code-btn">
-                    <span>Code</span>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 18px; height: 18px; margin-left: 8px;"><polyline points="6 9 12 15 18 9"></polyline></svg>
-                </button>
+                <div style="display: flex; align-items: center; justify-content: space-between;">
+                    <button id="toggleCodeBtn" class="toggle-code-btn">
+                        <span>Code</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 18px; height: 18px; margin-left: 8px;"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </button>
+                    <div id="codeZoomControls" style="display: none; gap: 0.5rem; align-items: center;">
+                        <span style="font-size: 0.8rem; color: #94a3b8; margin-right: 0.5rem;">Zoom</span>
+                        <button id="btnZoomOut" style="width: 32px; height: 32px; border-radius: 6px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: white; font-weight: bold; cursor: pointer; display: flex; align-items: center; justify-content: center;">-</button>
+                        <button id="btnZoomIn" style="width: 32px; height: 32px; border-radius: 6px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: white; font-weight: bold; cursor: pointer; display: flex; align-items: center; justify-content: center;">+</button>
+                    </div>
+                </div>
                 <div id="sampleCodeBlock" style="display: none; margin-top: 1.5rem;">
-                    <pre><code style="color: #86efac; font-family: monospace;">${sampleCode.replace(/</g, '&lt;').replace(/>/g, '&gt;')}</code></pre>
+                    <pre id="codePreBlock" style="transition: font-size 0.2s;"><code style="color: #86efac; font-family: monospace;">${sampleCode.replace(/</g, '&lt;').replace(/>/g, '&gt;')}</code></pre>
                 </div>
             </div>
         </div>
@@ -214,13 +221,36 @@ window.openChildSlide = function(slideIdx, probIdx) {
     
     const toggleCodeBtn = document.getElementById('toggleCodeBtn');
     const sampleCodeBlock = document.getElementById('sampleCodeBlock');
+    const codeZoomControls = document.getElementById('codeZoomControls');
+    const codePreBlock = document.getElementById('codePreBlock');
+    
+    // Set default font size depending on screen width
+    let currentCodeSize = window.innerWidth <= 768 ? 10 : 16;
+    codePreBlock.style.fontSize = currentCodeSize + 'px';
+
+    document.getElementById('btnZoomOut').addEventListener('click', () => {
+        if (currentCodeSize > 6) {
+            currentCodeSize -= 2;
+            codePreBlock.style.fontSize = currentCodeSize + 'px';
+        }
+    });
+
+    document.getElementById('btnZoomIn').addEventListener('click', () => {
+        if (currentCodeSize < 32) {
+            currentCodeSize += 2;
+            codePreBlock.style.fontSize = currentCodeSize + 'px';
+        }
+    });
+
     toggleCodeBtn.addEventListener('click', () => {
         if (sampleCodeBlock.style.display === 'none') {
             sampleCodeBlock.style.display = 'block';
+            codeZoomControls.style.display = 'flex';
             toggleCodeBtn.querySelector('span').innerText = 'Hide Code';
             toggleCodeBtn.querySelector('svg polyline').setAttribute('points', '18 15 12 9 6 15');
         } else {
             sampleCodeBlock.style.display = 'none';
+            codeZoomControls.style.display = 'none';
             toggleCodeBtn.querySelector('span').innerText = 'Code';
             toggleCodeBtn.querySelector('svg polyline').setAttribute('points', '6 9 12 15 18 9');
         }
